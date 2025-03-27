@@ -24,4 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
       countdownElement.innerHTML = "EXPIRED";
     }
   }, 1000);
+});// Smooth scrolling for navigation links
+const navLinks = document.querySelectorAll("nav .nav-links a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const targetId = link.getAttribute("href").substring(1);
+    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+  });
 });
+
