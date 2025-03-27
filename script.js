@@ -1,37 +1,117 @@
-// Countdown Timer
-document.addEventListener("DOMContentLoaded", function() {
-  const countdownElement = document.getElementById("countdown");
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  // Set the date we're counting down to
-  const eventDate = new Date("November 19, 2025 09:00:00").getTime();
+body {
+  background: #121212;
+  color: #ffffff;
+}
 
-  // Update the countdown every 1 second
-  const timer = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = eventDate - now;
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 15px 20px;
+}
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    // Display the result
-    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+.nav-links {
+  list-style: none;
+  display: flex;
+}
 
-    // If the countdown is finished, write some text
-    if (distance < 0) {
-      clearInterval(timer);
-      countdownElement.innerHTML = "EXPIRED";
-    }
-  }, 1000);
-});// Smooth scrolling for navigation links
-const navLinks = document.querySelectorAll("nav .nav-links a");
+.nav-links li {
+  margin: 0 15px;
+}
 
-navLinks.forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    const targetId = link.getAttribute("href").substring(1);
-    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-  });
-});
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
 
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #282828;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Articles Section */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin-top: 15px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
