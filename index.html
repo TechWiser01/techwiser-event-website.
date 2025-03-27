@@ -1,73 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechWiserX - Tech Blog</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benelux Clone - TechWiserX Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo">Benelux Clone</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Navbar -->
-  <header>
-    <nav>
-      <div class="logo">TechWiserX</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Guides</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <div class="nav-icons">
-        <input type="text" id="search" placeholder="Search...">
-        <button id="dark-mode-toggle">🌙</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Stay Updated with the Latest Tech Trends 🚀</h1>
-    <p>Read the latest articles on gadgets, AI, cybersecurity, and more.</p>
-  </section>
-
-  <!-- Articles Section -->
-  <main>
-    <section class="articles">
-      <article class="card">
-        <img src="images/article1.jpg" alt="Tech News">
-        <h2>AI is Transforming the Future</h2>
-        <p>Artificial Intelligence is reshaping industries and our daily lives...</p>
-        <a href="#">Read More</a>
-      </article>
-
-      <article class="card">
-        <img src="images/article2.jpg" alt="Gadget Review">
-        <h2>Best Smartphones of 2025</h2>
-        <p>We tested and ranked the top flagship smartphones...</p>
-        <a href="#">Read More</a>
-      </article>
-
-      <article class="card">
-        <img src="images/article3.jpg" alt="Cybersecurity">
-        <h2>Top 5 Cybersecurity Threats</h2>
-        <p>Hackers are becoming smarter. Here’s how to stay safe online...</p>
-        <a href="#">Read More</a>
-      </article>
+    <section class="hero">
+        <h1>Welcome to the Future of Tech</h1>
+        <p>Latest insights from TechWiserX</p>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 TechWiserX | All Rights Reserved</p>
-    <div class="social-links">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </footer>
+    <section class="content" id="articles">
+        <h2>Latest Articles</h2>
+        <div class="articles-container" id="articles-container">
+            <!-- Articles will be loaded dynamically -->
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Benelux Clone | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
+
