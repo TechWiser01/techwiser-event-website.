@@ -1,103 +1,116 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: #121212;
+  color: #ffffff;
 }
 
-header {
-  background-color: #1a1a1a;
-  color: white;
-  padding: 20px;
-}
-
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #1f1f1f;
+  padding: 15px 20px;
 }
 
-nav .logo {
+.logo {
   font-size: 24px;
   font-weight: bold;
 }
 
-nav .nav-links {
+.nav-links {
   list-style: none;
   display: flex;
 }
 
-nav .nav-links li {
+.nav-links li {
   margin: 0 15px;
 }
 
-nav .nav-links li a {
+.nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
 }
 
-.hero-section {
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
   text-align: center;
-  padding: 100px 20px;
-  background: #333;
-}
-
-.hero-section h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-.hero-section p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-#countdown {
-  font-size: 30px;
-  font-weight: bold;
-  color: #ff6600;
-}
-
-main {
   padding: 50px 20px;
+  background: #282828;
 }
 
-main h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+.hero h1 {
+  font-size: 36px;
 }
 
-.agenda-item, .speaker, .sponsor-logo {
-  margin: 15px 0;
-}
-
-.agenda-item p, .speaker p {
-  font-size: 16px;
-}
-
-.speaker img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer .social-links {
+.hero p {
+  font-size: 18px;
   margin-top: 10px;
 }
 
-footer .social-links a {
+/* Articles Section */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin-top: 15px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+}
+
+.social-links a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
